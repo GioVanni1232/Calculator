@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.calculator {
+  border: 1px solid black;
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.calculator .display {
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  justify-content: end;
+  padding-right: 20px;
+}
+.calculator .calculator-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.calculator .calculator-buttons div {
+  text-align: center;
+  padding: 0.83em;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(165, 165, 165);
+  transition: 0.2s ease-in-out;
+}
+.calculator .calculator-buttons div:hover {
+  background-color: black;
+  color: white;
+}
+.calculator .calculator-buttons .equals {
+  grid-column: 4/4;
+  grid-row: 2/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f35f03;
+}
+.calculator .calculator-buttons .equals:hover {
+  background-color: #f35f03;
+  opacity: 0.5;
+}
+.calculator .calculator-buttons [data-key=operator] {
+  background-color: rgb(217, 217, 217);
+}
+.calculator .calculator-buttons [data-key=operator]:hover {
+  color: black;
+  background-color: white;
+  border: 1.4px solid rgb(13, 117, 186);
+}
+
+.display-up {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+@media only screen and (max-width: 660px) {
+  .calculator {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .calculator {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .calculator {
+    width: 200px;
+  }
+}/*# sourceMappingURL=main.css.map */
